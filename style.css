@@ -46,6 +46,17 @@
 #active{
     color: #8490ff;
 }
+#check{
+    display: none;
+}
+.checkbtn{
+    display: none;
+    font-size: 30px;
+    color: rgba(0, 0, 0, 0.9);
+    margin-right: 20px;
+}
+
+
 .profile{
     width: 100%;
     background-color: #f9f9ff;
@@ -453,7 +464,7 @@
         justify-content: space-between;
     }
     .logo{
-        margin: 0;
+        margin: 0 0 0 20px;
     }
     .nav{
         margin: 0;
@@ -540,12 +551,42 @@
 
 
 @media(max-width:460px){
+    .nav ul{
+        position: fixed;
+        width: 140px;
+        height: 395px;
+        background: #f0ecec;
+        top: 70px;
+        left: -160px;
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        padding-left: 20px;
+        box-shadow: -21.213px 21.213px 30px 0px rgb(158 158 158 / 100%);
+        transition: all .5s ease-in;
+    }
+    .nav ul li{
+        text-align: left;
+    }
+    .nav ul li a{
+        line-height: 30px;
+        font-size: 15px;
+    }
+    .checkbtn{
+        display: block;
+    }
+    #check:checked ~ ul{
+        left: 0;
+    }
     .profile{
         flex-wrap: wrap;
         margin-top: 100px;
     }
     .profile div{
         width: 100%;
+    }
+    .name{
+        padding-left: 20px;
     }
     .name h1{
         font-size: 30px;
